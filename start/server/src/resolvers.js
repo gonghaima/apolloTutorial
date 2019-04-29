@@ -23,6 +23,8 @@ module.exports = {
           : false
       };
     },
+    launch: (_, { id }, { dataSources }) =>
+      dataSources.launchAPI.getLaunchById({ launchId: id }),
     me: (_, __, { dataSources }) => dataSources.userAPI.findOrCreateUser()
   },
   Mission: {
